@@ -8,15 +8,14 @@ public class leeftijd {
         int leeftijd;
 
         Scanner input = new Scanner(System.in);
-        boolean running = true;
-        while (running) {
-            System.out.println();
+
+        while (true){
+            System.out.println("");
             System.out.print("Vul je leeftijd in:\t");
             leeftijd = input.nextInt();
-            if (leeftijd < 18) {
+            if (leeftijd < 18){
                 System.out.println("Nog geen biertje voor jou");
-                running = false;
-            } else {
+            }else {
                 System.out.println("Wil je een biertje!!");
             }
         }

@@ -3,7 +3,18 @@ package Week2;
 import java.util.Scanner;
 
 public class uitwerkingen {
-    private static void split(){
+
+    private static void next(){
+        int input;
+        System.out.println("\nDruk op ENTER om verder te gaan");
+        try{
+            input = System.in.read();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    static void split(){
         String split = "\n#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#";
         System.out.println(split);
     }
@@ -31,13 +42,13 @@ public class uitwerkingen {
             case "Opdracht 1.6":
                 System.out.println("Schrijf een programma \nwaarmee je een bedrag in euro’s \nkunt omrekenen in dollars. \nGebruik als variabelen doubles. \nLees het euro getal in en toon \nals uitvoer het dollar getal.");
                 break;
-            case "Opdracht 1.7":
+            case "Challenge Opdracht 1.7":
                 System.out.println("Lees een aantal seconden in. \nToon deze waarde als uren, \nminuten en seconden. \nDruk het netjes af.");
                 break;
-            case "Opdracht 1.8":
+            case "Challenge Opdracht 1.8":
                 System.out.println("Lees een kommagetal in. \nRond dit getal af volgens de normale regels. \nDruk het resultaat af.");
                 break;
-            case "Opdracht 1.9":
+            case "Challenge Opdracht 1.9":
                 System.out.println("Doe opdracht 1.9, \nmaar nu met 1 cijfer achter de komma.");
                 break;
                 default:
@@ -46,11 +57,11 @@ public class uitwerkingen {
         System.out.println("-------------------------------------------------------------");
     }
 
-    private static void into(){
+    static void into(){
         System.out.println("HBO-ICT Huiswerkopdrachten Week 2\nAuthor:\t\tReuben Domacasse\nStud.no:\t15123804");
     }
 
-    private static void keuzemenu(){
+    static void keuzemenu(){
         into();
         Scanner input = new Scanner(System.in);
         while(true) {
@@ -61,7 +72,7 @@ public class uitwerkingen {
             System.out.println("Typ een getal in tussen 1-9 om opdracht uit te voeren");
             split();
             System.out.print("Typ \"S\" of STOP in om te stoppen\nWat ga je doen?\nJe besluit:\t");
-            int keuze;
+            int keuze = 0;
             try {
                 keuze = input.nextInt();
             } catch (Exception e) {
@@ -73,30 +84,39 @@ public class uitwerkingen {
             switch (keuze) {
                 case 1:
                     opdr1_1.main(null);
+                    next();
                     break;
                 case 2:
                     opdr1_2.main(null);
+                    next();
                     break;
                 case 3:
                     opdr1_3.main(null);
+                    next();
                     break;
                 case 4:
                     opdr1_4.main(null);
+                    next();
                     break;
                 case 5:
                     opdr1_5.main(null);
+                    next();
                     break;
                 case 6:
                     opdr1_6.main(null);
+                    next();
                     break;
                 case 7:
                     opdr1_7.main(null);
+                    next();
                     break;
                 case 8:
                     opdr1_8.main(null);
+                    next();
                     break;
                 case 9:
                     opdr1_9.main(null);
+                    next();
                     break;
                 default:
                     System.out.println("Dat is geen getal tussen 1-9!\n");
